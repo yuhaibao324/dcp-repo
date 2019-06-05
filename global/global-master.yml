@@ -1,0 +1,90 @@
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  jmx:
+    enabled: false
+  jackson: date-format=yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ
+
+#
+sso:
+  config:
+    appId: na186
+    ssoServer: 10.0.3.154:8080
+
+global:
+  mysql:
+    ip: 10.236.2.139
+    port: 3306
+    username: MCloud
+    password: MCloud20181129144958
+  kafka:
+    cluster-servers: 10.236.9.103:9092,10.236.9.104:9092,10.236.9.105:9092,10.236.9.106:9092,10.236.9.99:9092
+  redis:
+    nodes: 10.236.1.1:2181,10.236.1.2:2181,10.236.1.3:2181
+    zkProxyDir: /zk/codis/db_zhmh-codis/proxy
+    timeout: 30000
+    maxtTotal: 80
+    maxIdle: 20
+#FastDFS
+fdfs:
+  soTimeout: 1500
+  connectTimeout: 600
+  thumbImage:
+    width: 150
+    height: 150
+  trackerList:
+    - 10.236.2.142:22122
+    - 10.236.2.143:22122
+
+common:
+  mail:
+    enable: true
+    host: 10.0.241.107
+    needAuth: true
+    password: Uni#mail
+    protocolType: smtp
+  elasticsearch:
+    poolSize: 5
+    clusterName: ES20181129150611-zhmh-first
+    clusterHosts: 10.236.1.21:9300,10.236.1.15:9300,10.236.1.14:9300
+  scheduler:
+    corePoolSize: 20
+    maxPoolSize: 60
+    queueCapacity: 350
+    keepAliveSeconds: 200
+
+#Ribbon
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetriesNextServer: 2
+  MaxAutoRetries: 1
+
+# feign
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+
+#  hystrix
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+unicomGroup:
+  deptId: 1

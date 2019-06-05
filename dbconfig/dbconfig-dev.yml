@@ -1,0 +1,16 @@
+db:
+  basedb:
+    ip: 10.236.9.150
+    port: 3306
+    username: root
+    password: Root123456!
+  commondb:
+    ip: 10.236.9.150
+    port: 3306
+    username: root
+    password: Root123456!
+  bizdb:
+    ip: 10.236.9.150
+    port: 3306
+    username: root
+    password: Root123456!
