@@ -4,7 +4,7 @@ zuul:
       path: /uas/**
       serviceId: dcp-uas-service
       sensitiveHeaders:
-    bams:
+    uam:
       path: /uam/**
       serviceId: dcp-uam-service
       sensitiveHeaders:
