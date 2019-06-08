@@ -1,11 +1,10 @@
-# datasource
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${db.bamsdb.ip}:${db.bamsdb.port}/plt_bams?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-    username: ${db.bamsdb.username}
-    password: ${db.bamsdb.password}
+    url: jdbc:mysql://${db.uamdb.ip}:${db.uamdb.port}/plt_uam?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: ${db.uamdb.username}
+    password: ${db.uamdb.password}
     druid:
       initial-size: 10
       max-active: 100
@@ -17,10 +16,9 @@ spring:
       filter-class-names: stat
       filters: stat,config
 
-#mybatis
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.dunzung.cloud.bams.entity
+  type-aliases-package: com.dunzung.cloud.uam.entity
 
 #Swagger
 api:
@@ -28,11 +26,11 @@ api:
     title: 权限管理服务
     contact: zhijund@163.com
     version: 1.0
-    basePackage: com.dunzung.cloud.bams.controller
+    basePackage: com.dunzung.cloud.uam.controller
 
 #Admin
 info:
-  name: dunzung-cloud-bams
+  name: dcp-uam-service
   description: 权限管理服务
   version: 1.0.0
 
@@ -44,3 +42,4 @@ endpoints:
 management:
   security:
     enabled: false
+
