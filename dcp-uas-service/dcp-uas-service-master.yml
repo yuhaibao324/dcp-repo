@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${db.uasdb.ip}:${db.uasdb.port}/plt_uam?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://${db.uasdb.ip}:${db.uasdb.port}/plt_uas?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: ${db.uasdb.username}
     password: ${db.uasdb.password}
     druid:
