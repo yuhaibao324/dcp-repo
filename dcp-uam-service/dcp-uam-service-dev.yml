@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${db.uamdb.ip}:${db.uamdb.port}/plt_uam?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://${db.uamdb.ip}:${db.uamdb.port}/plt_uam?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: ${db.uamdb.username}
     password: ${db.uamdb.password}
     druid:
