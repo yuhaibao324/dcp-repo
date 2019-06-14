@@ -1,0 +1,25 @@
+zuul:
+  routes:
+    uaa:
+      path: /uaa/**
+      strip-prefix: true
+      sensitiveHeaders:
+      serviceId: dcp-uaa
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      access-token-uri: http://dcp-gws/uaa/oauth/token
+      user-authorization-uri: http://dcp-gws/uaa/oauth/authorize
+    resource:
+      user-info-uri:  http://dcp-gws/uaa/user
+      prefer-token-info: false
+
+#Admin
+info:
+  name: dcp-gws
+  description: UAA服务
+  version: 1.0.0
+

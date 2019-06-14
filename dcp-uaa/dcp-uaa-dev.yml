@@ -18,28 +18,19 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.dunzung.cloud.uam.entity
+  type-aliases-package: com.dunzung.dcp.uaa.entity
 
 #Swagger
 api:
   swagger:
-    title: 权限管理服务
+    title: UAA服务
     contact: zhijund@163.com
     version: 1.0
-    basePackage: com.dunzung.cloud.uam.controller
+    basePackage: com.dunzung.dcp.uaa.controller
 
 #Admin
 info:
-  name: dcp-uam-service
-  description: 权限管理服务
+  name: dcp-uaa
+  description: UAA服务
   version: 1.0.0
-
-endpoints:
-  trace:
-    enabled: true
-    sensitive: false
-
-management:
-  security:
-    enabled: false
 
