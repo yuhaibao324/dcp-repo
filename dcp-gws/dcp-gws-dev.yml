@@ -14,7 +14,7 @@ security:
       access-token-uri: http://dcp-gws/uaa/oauth/token
       user-authorization-uri: http://dcp-gws/uaa/oauth/authorize
     resource:
-      user-info-uri:  http://dcp-gws/uaa/user
+      user-info-uri: http://dcp-uaa/uaa/api/v1/authinfo
       prefer-token-info: false
 
 #Admin
