@@ -1,9 +1,8 @@
 zuul:
+  ignored-services: '*'
   routes:
     uaa:
       path: /uaa/**
-      strip-prefix: true
-      sensitiveHeaders:
       serviceId: dcp-uaa
 
 security:
