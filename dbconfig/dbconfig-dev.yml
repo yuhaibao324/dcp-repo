@@ -1,11 +1,6 @@
 db:
-  uamdb:
+  uaamdb:
     ip: localhost
     port: 3306
     username: root
-    password: admin
-  uasdb:
-    ip: localhost
-    port: 3306
-    username: root
-    password: admin
+    password: 123456
